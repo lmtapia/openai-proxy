@@ -1,11 +1,11 @@
 import os
 import openai
-from dotenv import dotenv_values
-#from operator import itemgetter
+# from dotenv import dotenv_values
+# from operator import itemgetter
 
-config = dotenv_values(".env")
-openai.api_key = config.get("OPENAI_API_KEY")
-# openai.api_key = os.getenv("OPENAI_API_KEY")
+# config = dotenv_values(".env")
+# openai.api_key = config.get("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def justModelsIds():
     models = openai.Model.list().data
